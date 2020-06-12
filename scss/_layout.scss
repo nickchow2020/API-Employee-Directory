@@ -1,0 +1,86 @@
+/*********************************
+// Basic Layout Style
+*********************/
+body{
+  background-color: lighten($primaryThemeColor,32%);
+}
+
+.main-wrap{
+    width: 90%;
+    margin: auto;
+    max-width: 1550px;
+}
+
+.main-header{
+    font-family: pageHeader;
+    font-size: 1.3rem;
+    color: $primaryThemeColor;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    @media(min-width:600px){
+        font-size: 2rem;
+    }
+    @media(min-width: 992px){
+        font-size: 2.5rem;
+        width: auto;
+    }
+}
+
+
+// .main-header{
+//     font-family: pageHeader;
+//     font-size: 2.5rem;
+//     color: $primaryThemeColor;
+//     padding: 1rem 0;
+// }
+/*********************************
+// Grid Layout Style
+*********************/
+.grid-container{
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 4px gray;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-auto-rows:200px;
+}
+.grid-item{
+    margin: 1.2rem;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px lighten($primaryThemeColor,20%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 4px tomato;
+    }
+}
+
+.avatar{
+    border-radius: 50%;
+}
+
+.name,
+.nameoverlay{
+    font-family: nameItem;
+    letter-spacing: 2px;
+}
+
+.email,
+.city,
+.phone,
+.address,
+.birthday{
+    color: $primaryThemeColor;
+    margin-top: 8px;
+}
